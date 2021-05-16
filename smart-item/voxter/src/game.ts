@@ -7,5 +7,5 @@ const spawner = new Spawner<Props>(post)
 spawner.spawn(
   'voxter', 
   new Transform({ position: new Vector3(8, 1, 8) }), {
-  tokenId: 123  
+  tokenId: 32771  
 })

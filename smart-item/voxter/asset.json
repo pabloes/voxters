@@ -1,0 +1,23 @@
+{
+    "id": "6464b5fg-d97d-49fc-9b99-4f9e2069da72",
+    "name": "Voxter",
+    "tags": [
+      "voxter",
+      "creature",
+      "decoration",
+      "nft",
+      "ERC721",
+      "manafever",
+      "voxters"
+    ],
+    "category": "decorations",
+    "model": "models/voxter_base.glb",
+    "parameters": [
+      {
+        "id": "tokenId",
+        "label": "TokenId",
+        "type": "integer",
+        "default":1
+      }      
+    ]
+  }

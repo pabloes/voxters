@@ -8,5 +8,5 @@ const voxter = createVoxter({
   rotation:Quaternion.Zero(),
   dna:0
 });
-
+voxter.applyDna(1);
 voxter.setParent(root);

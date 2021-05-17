@@ -4,14 +4,22 @@ export type Props = {
   }
    
 export default class Voxter implements IScript<Props> {
-  init() { }
+  init() { 
+    new GLTFShape('models/accesories/acc1.glb');
+    new GLTFShape('models/accesories/acc2.glb');
+    new GLTFShape('models/accesories/acc3.glb');
+    new GLTFShape('models/accesories/acc4.glb');
+    new GLTFShape('models/accesories/acc5.glb');
+    new GLTFShape('models/accesories/acc6.glb');
+    new GLTFShape('models/accesories/acc7.glb');
+    new GLTFShape('models/accesories/acc8.glb');
+  }
 
-  spawn(host: Entity, props: Props, channel: IChannel) {
-    
+  spawn(host: Entity, props: Props, channel: IChannel) {    
     const voxter = createVoxter({
-          position:Vector3.Zero(),
+          position:new Vector3(0,0.5,0),
           rotation:Quaternion.Zero(),
-          dna:props.tokenId||1
+          dna:Number(props.tokenId)||32771
     });
     voxter?.setParent(host)
 

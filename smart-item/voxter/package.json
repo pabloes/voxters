@@ -11,7 +11,7 @@
     "ecs:install-next": "npm install --save-dev decentraland-ecs@next"
   },
   "devDependencies": {
-    "decentraland-ecs": "^6.6.3"
+    "decentraland-ecs": "^6.6.5-20210514214922.commit-9e3ae89"
   },
   "dependencies": {
     "decentraland-builder-scripts": "^0.24.0"

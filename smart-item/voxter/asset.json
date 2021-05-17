@@ -1,5 +1,5 @@
 {
-    "id": "6464b5fg-d97d-49fc-9b99-4f9e2069da72",
+    "id": "3718b3aa-e21c-12bc-9b19-1a2a2762db72",
     "name": "Voxter",
     "tags": [
       "voxter",
@@ -17,7 +17,7 @@
         "id": "tokenId",
         "label": "TokenId",
         "type": "integer",
-        "default":1
+        "default":32771
       }      
     ]
   }

@@ -15,9 +15,11 @@ export const createMouth = (boxter, variationIndex, color, texture) => {
     const NECK_HEIGHT = 32/256;
 
     eyes.addComponent(new Transform({
-      position:new Vector3(0,-((1/3)/2),-0.5001), 
+      //position:new Vector3(0,-((1/3)/2),0.5001), 
+      position:new Vector3(0,-((1/3)/2),0.5009), 
       scale:new Vector3(1-0.05,2/3-0.05, 1)
     }));
+    eyes.getComponent(Transform).rotate(Vector3.Up(), 180)
    // mat.albedoColor = Color3.Yellow();
     mat.specularIntensity = 0;
     mat.roughness = 1;

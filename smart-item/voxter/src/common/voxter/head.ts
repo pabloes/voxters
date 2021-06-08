@@ -12,6 +12,7 @@ export const createHead = (boxter:Entity, index:number) => {
     ];    
     const head = new Entity();
     head.addComponent(new Transform({position:new Vector3(0,0,0)}))
+    head.getComponent(Transform).rotate(Vector3.Up(), 180)
     if(index) head.addComponent(shapes[index-1]);
     head.setParent(boxter);
 

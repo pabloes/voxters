@@ -1,0 +1,17 @@
+{
+    "id": "2128c2bc-c12b-42cd-6a12-bb1b1762ca71",
+    "name": "voxterspet",
+    "tags": [
+      "voxter",
+      "creature",
+      "decoration",
+      "nft",
+      "ERC721",
+      "manafever",
+      "voxters",
+      "pet"
+    ],
+    "category": "decorations",
+    "model": "models/voxter_base.glb",
+    "parameters": []
+  }

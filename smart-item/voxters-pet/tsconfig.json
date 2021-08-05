@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outFile": "./bin/game.js",
+    "allowJs": true,
+    "strict": true,
+    "noLib": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "downlevelIteration": true
+  },
+  "include": ["src/**/*.ts"],
+  "extends": "./node_modules/decentraland-ecs/types/tsconfig.json"
+}

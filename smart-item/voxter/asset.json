@@ -12,12 +12,120 @@
     ],
     "category": "decorations",
     "model": "models/voxter_base.glb",
-    "parameters": [
-      {
+  "parameters": [
+    {
         "id": "tokenId",
         "label": "TokenId",
         "type": "integer",
         "default":32771
-      }      
-    ]
-  }
+    },
+    {
+    "id": "showBody",
+    "label": "Show Body",
+    "type": "boolean",
+    "default": true
+    },
+    {
+      "id": "followActive",
+      "label": "Face Follow User",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "id": "followSpeed",
+      "label": "Face Follow Speed",
+      "type": "float",
+      "default": 1
+    },
+    {
+      "id": "followLockAxis",
+      "label": "Face Follow Lock Axis",
+      "type": "boolean",
+      "default": false
+    },
+    {
+    "id": "clickable",
+    "label": "Click on/off",
+    "type": "boolean",
+    "default": true
+    },
+    {
+      "id": "onClick",
+      "label": "When clicked",
+      "type": "actions"
+    },
+    {
+      "id": "onClickText",
+      "label": "Hover text",
+      "type": "text",
+      "default": "Interact"
+    },
+    {
+      "id": "clickButton",
+      "label": "Click Button",
+      "type": "options",
+      "options": [
+        {
+          "value": "POINTER",
+          "label": "Click"
+        },
+        {
+          "value": "PRIMARY",
+          "label": "Primary Button"
+        },
+        {
+          "value": "SECONDARY",
+          "label": "Secondary Button"
+        }
+      ],
+      "default": "POINTER"
+    }
+  ],
+  "actions": [
+    {
+      "id": "activateFollow",
+      "label": "Activate Follow",
+      "parameters": []
+    },
+    {
+      "id": "deactivateFollow",
+      "label": "Deactivate Follow",
+      "parameters": []
+    },
+    {
+      "id": "changeTokenId",
+      "label": "Change Token Id",
+      "parameters": [  
+        {
+          "id": "tokenId",
+          "label": "TokenId",
+          "type": "integer",
+          "default":32771
+        }
+      ]
+    },
+    {
+      "id": "changeRandomTokenId",
+      "label": "Change Random Token Id",
+      "parameters": [  
+        {
+          "id": "tokenIdUpper",
+          "label": "TokenId Upper",
+          "type": "integer",
+          "default":32771
+        }
+      ]
+    },
+    {
+      "id": "putOnItem",
+      "label": "Wear on Head",
+      "parameters": [  ]
+    },
+    {
+      "id": "takeOffItem",
+      "label": "Take off Head",
+      "parameters": [  ]
+    }
+
+  ]
+}

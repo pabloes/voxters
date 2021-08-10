@@ -1,4 +1,4 @@
-import { COLOR } from "../../lib/decoder";
+import { COLOR } from "../lib/decoder";
 const colors = [
   `#ff0000`,
   `#ff00ff`, 
@@ -21,15 +21,18 @@ const emissiveByColor = [
 export const createEyes = (boxter, variationIndex, color, texture) => {
     const eyes = new Entity();
     eyes.setParent(boxter);
+    //CACHE!?!
     const mat = new Material();
     const eyeShape = new PlaneShape();
     eyeShape.withCollisions = false;
     eyeShape.uvs = getUvs(variationIndex+1);
     eyes.addComponent(eyeShape);    
     eyes.addComponent(new Transform({
-      position:new Vector3(0,1/3-0.025,-0.5001), 
+      //position:new Vector3(0,1/3-0.025,-0.5001), 
+      position:new Vector3(0,1/3-0.025,0.5009), 
       scale:new Vector3(1-0.05,1/3, 1)
     }));
+    eyes.getComponent(Transform).rotate(Vector3.Up(), 180)
    // mat.albedoColor= Color3.FromHexString(color);
     mat.emissiveColor = Color3.FromHexString(color);
     mat.emissiveIntensity = emissiveByColor[colors.indexOf(color)];

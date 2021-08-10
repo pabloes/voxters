@@ -18,18 +18,31 @@ export type VoxterCreationOptions = {
   position:Vector3,
   dna:number,
   rotation:Quaternion
+  showBody?: boolean
 };
 
-export const createVoxter = ({position, dna, rotation}:VoxterCreationOptions) => {   
+export const createVoxter = ({position, dna, rotation, showBody}:VoxterCreationOptions) => {   
     const [eyeIndex, mouthIndex, eyeColorIndex, headIndex] = decode(Number(dna), propertySizes);
     const eyeColor = colors[eyeColorIndex];
     const state = {dna:Number(dna)};
     const entity = new Entity();
-    const skin = new Material();
-    skin.albedoColor = new Color3(0,0,0);
+    
     const boxterShape = new BoxShape();
+    boxterShape.withCollisions = true
     entity.addComponent(boxterShape);
-    entity.addComponent(skin);  
+    
+    if(!showBody){
+      //cache skin
+      const skin = new BasicMaterial()
+      skin.texture = new Texture('models/transparent.png')
+      skin.alphaTest = 1
+      entity.addComponent(skin);  
+    }else{
+      const skin = new Material();
+      skin.albedoColor = new Color3(0,0,0);
+      entity.addComponent(skin);  
+    }
+    
     
     const boxterTransform = new Transform({
       position,
@@ -55,6 +68,7 @@ export const createVoxter = ({position, dna, rotation}:VoxterCreationOptions) =>
         return true;
       },
       getDna:()=>state.dna,
+      getState:()=>{return state},
       getEntity:()=>entity,
       setParent:(parent:Entity)=>entity.setParent(parent)
     };

@@ -7,11 +7,21 @@ export type Props = {
    
 export default class Voxter implements IScript<Props> {
   init() { 
-      
+    
+    new GLTFShape('metas/voxterspet/accesories/acc1.glb');
+    new GLTFShape('metas/voxterspet/accesories/acc2.glb');
+    new GLTFShape('metas/voxterspet/accesories/acc3.glb');
+    new GLTFShape('metas/voxterspet/accesories/acc4.glb');
+    new GLTFShape('metas/voxterspet/accesories/acc5.glb');
+    new GLTFShape('metas/voxterspet/accesories/acc6.glb');
+    new GLTFShape('metas/voxterspet/accesories/acc7.glb');
+    new GLTFShape('metas/voxterspet/accesories/acc8.glb');
+    new Texture('metas/voxterspet/images/sprites2048.png',{samplingMode:1, hasAlpha:true});
+    console.log("VERSION 5");
   }
 
   spawn(host: Entity, props: Props, channel: IChannel) {    
-    log("spawning voxter")
+    log("spawning voxter v5")
     const landOwnerData = {
       host_data: `{
       "voxterspet": {
@@ -34,11 +44,11 @@ export default class Voxter implements IScript<Props> {
       }
     }`
     };
-    new VoxtersPet({
+    engine.addSystem(new VoxtersPet({
       getUserData,
       getCurrentRealm,
-    },landOwnerData);
-
+    },landOwnerData));
+    console.log("voxterspet system instantiated")
   }
 }
   
